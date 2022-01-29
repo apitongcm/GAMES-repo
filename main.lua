@@ -53,6 +53,16 @@ function love.keypressed(key)
     end
 end
 
+--fifth commit 
+-- keyboard was pressed
+function love.keyboard.wasPressed(key)
+    if love.keyboard.keysPressed[key] then 
+        return true
+    else 
+        return false 
+    end
+end
+
 -- second commit 
 --adding love.update for the background
 function love.update(dt)
@@ -64,6 +74,9 @@ function love.update(dt)
     --fourth commit 
     --adding velocity/gravity to the bird 
     bird:update(dt)
+
+    --reset input table
+    love.keyboard.keysPressed = {}
  
 end
 
